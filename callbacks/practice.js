@@ -219,9 +219,9 @@ each(names, function(item, indice){
 
 // Code here
 
-function getUserById(arr, id, callback) {
+function getUserById(arr, personId, callback) {
   for(let i = 0; i < arr.length; i++) {
-    if(arr[i].id === matchid) {
+    if(arr[i].id === personId) {
       callback(arr[i])
     }
   }
