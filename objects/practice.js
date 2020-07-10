@@ -16,6 +16,12 @@
 
 //Code here
 
+let me = {
+  name: "Groucho",
+  age: 40,
+}
+alert(me.name)
+
 ////////// PROBLEM 2 //////////
 
 /*
@@ -25,12 +31,24 @@
 
 //Code here
 
+let favoriteThings = {
+  band: "Beatles",
+  food: "bibimbap",
+  person: "Wilberforce",
+  book: "Education of a Wandering Man",
+  movie: "Sabrina",
+  holiday: "Christmas"
+}
+
+
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
   and then another key named 'brand' with the value being your favorite brand.
 */
 
 //Code here
+favoriteThings.car = "Tesla"
+favoriteThings.brand = "Disney"
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -38,6 +56,9 @@
 */
 
 //Code here
+favoriteThings["food"] = "Chicken Nuggets"
+favoriteThings["book"] = "Harry Potter"
+
 
 ////////// PROBLEM 3 //////////
 
@@ -51,11 +72,22 @@
 
 //Code here
 
+let backPack = {
+
+}
+
+let item = "firstPocket"
+
+backPack[item] = "chapstick"
+backPack.color = "pink"
+
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
+
+// alert(backPack)
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -64,6 +96,8 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
+
+console.log(backPack)
 
 ////////// PROBLEM 4 //////////
 
@@ -86,6 +120,10 @@ var user2 = {
 
 //Code Here
 
+user2["name"] = "Bryan G. Smith"
+user2.email = "bryan.smith@devmounta.in"
+
+
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
 
@@ -97,6 +135,10 @@ var user2 = {
 
 //Code Here
 
+let methodCollection = {
+
+}
+
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
@@ -104,11 +146,21 @@ var user2 = {
 
 //Code Here
 
+methodCollection["alertHello"] = function() {
+  alert("hello")
+}
+methodCollection.logHello = function() {
+  console.log("hello")
+}
+
 /*
   Now call your alertHello and logHello methods.
 */
 
 //Code Here
+
+methodCollection.logHello()
+methodCollection.alertHello()
 
 ////////// PROBLEM 6 //////////
 
@@ -119,6 +171,29 @@ var user2 = {
 
 //Code Here
 
+
+
+function makePerson(name, birthday, ssn) {
+  let newPerson = {
+    name: name,
+    birthday: birthday,
+    ssn: ssn
+  }
+  return newPerson
+}
+
+//Note: Another, simpler option. If key and value match, you don't have to put name: name,; you can just type   name, 
+
+// function makePerson(name, birthday, ssn) {
+//   let newPerson = {
+//     name, birthday, ssn
+//   }
+//   return newPerson
+// }
+// const person = makePerson("Bob", "May1", 3434)
+
+// console.log(person)
+
 ////////// PROBLEM 7 //////////
 
 /*
@@ -127,3 +202,24 @@ var user2 = {
 */
 
 //Code Here
+
+function makeCard(cardNumber, expirationDate, securityCode) {
+  let newCard = {
+    cardNumber, expirationDate, securityCode
+  }
+  return newCard
+}
+
+makeCard(1234, 0720, 999)
+
+//Option 2:
+// function makeCard(cardNumber, expirationDate, securityCode) {
+//   let newCard = {
+//     cardNumber: cardNumber,
+//     expirationDate: expirationDate, 
+//     securityCode: securityCode
+//   }
+//   return newCard
+// }
+
+// makeCard(1234, 0720, 999)

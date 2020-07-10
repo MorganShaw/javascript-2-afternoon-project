@@ -149,26 +149,22 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 // */
 
 // //Code Here
- function divider(numbersArray) {
-    const evensArray = []
-    for(let i = 0; i < divider.length; i++) {
-      if(divider[i] % 2 === 0) {
-        evensArray.push()
-      }
-      evensArray.push()
-    }
 
-  return evensArray
+function divider(numbersArray) {
+  const evensArray = []
+  const oddsArray = []
+  for(let i = 0; i < numbersArray.length; i++) {
+    if(numbersArray[i] % 2 === 0) {
+      evensArray.push(numbersArray[i])
+    } else {
+        oddsArray.push(numbersArray[i])
+    }  
+  }
+  let evensOddsArray = [evensArray, oddsArray]
+  return evensOddsArray
  }
 
- function evenFinder(nums) {
-  const evenNums = []
-  for(let i = 0; i < nums.length; i++) {
-    if (nums[i] % 2 === 0) {
-      evenNums.push(nums[i])
-    }
-  } return evenNums
-}
+
 // ////////// PROBLEM 7 //////////
 
 // // Do not edit the code below.
