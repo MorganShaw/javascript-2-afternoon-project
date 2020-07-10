@@ -28,7 +28,9 @@
 */
 
 // Code Here 
-
+function first(names, cb) {
+  cb(names[0]);  
+ }
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
@@ -40,6 +42,12 @@ first(names, function(firstName){
 
 
 
+
+
+
+
+
+
 ////////// PROBLEM 2 //////////
 
 /*
@@ -48,6 +56,11 @@ first(names, function(firstName){
 */
 
 //Code Here
+
+function last(array, callback) {
+  callback(array[array.length - 1])
+}
+
 
 // Do not edit the code below.
 last(names, function(lastName){
@@ -67,6 +80,11 @@ last(names, function(lastName){
 
 //Code Here
 
+function multiply(num1, num2, callback) {
+  let answer = num1 * num2
+  callback(answer)
+}
+
 // Do not edit the code below.
 multiply(4, 3, function(answer){
   console.log('The answer is ' + answer); //should console.log 12
@@ -85,6 +103,33 @@ multiply(4, 3, function(answer){
 */
 
 //Code Here 
+
+//Simplest and cleanest way to do this!
+
+// function contains(array, name, callback) {
+//   callback(array.includes(name))
+// }
+
+//Somewhat simple way to do this....
+// function contains(array, name, callback) {
+//   if (array.includes(name)) {
+//     callback(true)
+//   } else {
+//     callback(false)
+//   }
+// }
+
+
+
+function contains(array, name, callback) {
+  let isInArray = false
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === name) {
+    isInArray = true  
+    }
+  }  
+  callback(isInArray)
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -106,6 +151,32 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
+
+
+function uniq(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = array.length - 1; j > i; j--) {
+      if(array[i] === array[j]) {
+        array.splice(j, 1)
+      }
+    }
+  }
+  callback(array)
+}
+
+
+// Option 2. This below makes sense to me. Just one more less efficient option.
+// function uniq(array, callback) {
+//   for (let i = 0; i < array.length; i++) {
+//     for(let j = 0; j < array.length; i++) {
+//       if(array[i] === array[j] && i !== j) {
+//         array.splice(j, 1)
+//       }
+//     }
+//   }
+//   callback(array)
+// }
+// END of Option 2 example of less efficient code. 
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){

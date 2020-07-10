@@ -19,6 +19,10 @@ var arr = [10,20,30];
 
 //Code Here
 
+function first(arr) {
+  return arr[0]
+}
+
 
 
 ////////// PROBLEM 2 //////////
@@ -34,199 +38,254 @@ var arr = [40,50,60];
 
 //Code Here
 
+function last(arr) {
+  return arr[arr.length - 1]
+}
 
 
-////////// PROBLEM 3 //////////
+// ////////// PROBLEM 3 //////////
 
-// Do not edit the code below.
+// // Do not edit the code below.
 var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
-// Do not edit the code above.
+// // Do not edit the code above.
 
-/*
-  Create a function named 'looper' that is given family as it's only argument. 
-  Loop through the given array and alert every item in the array.
-*/
+// /*
+//   Create a function named 'looper' that is given family as it's only argument. 
+//   Loop through the given array and alert every item in the array.
+// */
 
-//Code Here
+// //Code Here
+
+function looper(family) {
+  for (let i = 0; i < family.length; i++) {
+    alert(family[i]);  
+  }
+}
+// looper(family)
 
 
 
-////////// PROBLEM 4 //////////
+// ////////// PROBLEM 4 //////////
 
-// Do not edit the code below.
+// // Do not edit the code below.
 var letters = ['A', 'B', 'C', 'D', 'E'];
-// Do not edit the code above.
+// // Do not edit the code above.
 
-/*
-  Write a function called reversedLooper that is given letters as it's only argument. 
-  Loop backwards, starting at the end of the letters array, alerting every item in the array.
-*/
+// /*
+//   Write a function called reversedLooper that is given letters as it's only argument. 
+//   Loop backwards, starting at the end of the letters array, alerting every item in the array.
+// */
 
-//Code Here
+// //Code Here
 
-
-
-////////// PROBLEM 5 //////////
-
-// Do not edit the code below.
-var nums = [1,2,3,6,22,98,45,23,22,12];
-// Do not edit the code above.
-
-/*
-  Write a function named evenFinder that is given nums as it's only argument.
-  Return an array that contains the even numbers from the nums array.
-*/
-
-//Code Here
-
-
-
-
-
-
-
-/////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
-////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
-
-
-
-
-
-
-
-////////// PROBLEM 6 //////////
-
-// Do not edit the code below.
-var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
-// Do not edit the code above.
-
-/*
-  Write a function called divider that is given one argument, numbersArray.
-  Have divider return an array with the first item in the array being the evens array (all the even values from numbersArray)
-  and the second item in the array being the odds array (all the odd values from numbersArray).
-*/
-
-//Code Here
-
-
-
-////////// PROBLEM 7 //////////
-
-// Do not edit the code below.
-var getRandomArbitrary = function() {
-  return Math.floor(Math.random() * 30);
-};
-// Do not edit the code above.
-
-/* 
-  var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
-  Above you're given a function (getRandomArbitrary) that will return a random number between 0 and 30.
-  There is also a commented out array full of numbers to help you visualize what your function will be receiving.
-  Write a function named finder that will take in an array as an argument.
-  In the function create a variable called randomNumber and set it to the invocation of getRandomArbitrary.
-  Loop through the array to see if randomNumber is in the array. 
-  If it is, return true, if it's not, return false
-*/
-
-//Code Here
-
-
-
-////////// PROBLEM 8 //////////
-
-// Do not edit the code below.
-var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-// Do not edit the code above.
-
-/*
-  Here we're going to write a function that mimics going shopping and checking things off of our grocery list and adding new items to our list.
-
-  Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. 
-  If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, updated grocery list.
-
-  Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list. 
-  In addItem add the item you passed in to myGroceryList then return the new, updated grocery list.
-
-  In both removeItem and addItem check to see if the 'myGroceryList' and 'item' arguments are truthy.
-  If they are not, return an empty array.
-
-  Here are some examples of calling your functions and what should be returned:
-  removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-  addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
-  removeItem(myGroceryList) --> [];
-  addItem() --> [];
-*/
-
-//Code Here
-
-
-
-////////// PROBLEM 9 //////////
-
-/*
-  Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
-*/
-
-//Code Here
-
-
-
-////////// PROBLEM 10 //////////
-
-// Do not edit the code below.
-var numbers = [5, '9', 16, 19, '25', '34', 48];
-// Do not edit the code above.
-
-/*
-  Write a function called addTen that is given 'numbers' as it's only argument.
-  Return a new array after adding ten to each item in numbers. 
-  Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
-*/
+function reversedLooper(letters) {
+  for(let i = letters.length - 1; i >= 0; i--) {
+    alert(letters[i])
+  }
+}
   
-//Code Here
+// reversedLooper(letters)
 
+// ////////// PROBLEM 5 //////////
 
+// // Do not edit the code below.
+var nums = [1,2,3,6,22,98,45,23,22,12];
+// // Do not edit the code above.
 
-////////// PROBLEM 11 //////////
+// /*
+//   Write a function named evenFinder that is given nums as it's only argument.
+//   Return an array that contains the even numbers from the nums array.
+// */
 
-// Do not edit the code below.
-var num1 = Math.floor(Math.random() * 30);
-var num2 = Math.floor(Math.random() * 30);
-var arr1 = [];
-var arr2 = [];
-for(var i = 0; i < num1; i++){
-  arr1.push(i);
+// //Code Here
+
+function evenFinder(nums) {
+  const evenNums = []
+  for(let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      evenNums.push(nums[i])
+    }
+  } return evenNums
 }
-for(var i = 0; i < num2; i++){
-  arr2.push(i);
+
+// function evenFinder(nums) {
+//   return
+// }
+
+//Other option to do the same thing.
+// function evenFinder(nums){
+//   for(let i = 0; i < nums.length; i++){
+//     if(nums[i] % 2 !== 0){
+//       nums.splice(i, 1)
+//     }
+//   }
+//   return nums
+// }
+
+// End of this example.
+
+
+
+
+// /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
+// ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
+
+
+
+
+
+
+
+// ////////// PROBLEM 6 //////////
+
+// // Do not edit the code below.
+var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
+// // Do not edit the code above.
+
+// /*
+//   Write a function called divider that is given one argument, numbersArray.
+//   Have divider return an array with the first item in the array being the evens array (all the even values from numbersArray)
+//   and the second item in the array being the odds array (all the odd values from numbersArray).
+// */
+
+// //Code Here
+ function divider(numbersArray) {
+    const evensArray = []
+    for(let i = 0; i < divider.length; i++) {
+      if(divider[i] % 2 === 0) {
+        evensArray.push()
+      }
+      evensArray.push()
+    }
+
+  return evensArray
+ }
+
+ function evenFinder(nums) {
+  const evenNums = []
+  for(let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0) {
+      evenNums.push(nums[i])
+    }
+  } return evenNums
 }
-// Do not edit the code above.
+// ////////// PROBLEM 7 //////////
 
-/*
-  Above is some code that adds a random number of values to both arr1 and arr2.
-  Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. 
-  Return the longer of the two arrays.
-*/
+// // Do not edit the code below.
+// var getRandomArbitrary = function() {
+//   return Math.floor(Math.random() * 30);
+// };
+// // Do not edit the code above.
 
-//Code Here
+// /* 
+//   var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
+//   Above you're given a function (getRandomArbitrary) that will return a random number between 0 and 30.
+//   There is also a commented out array full of numbers to help you visualize what your function will be receiving.
+//   Write a function named finder that will take in an array as an argument.
+//   In the function create a variable called randomNumber and set it to the invocation of getRandomArbitrary.
+//   Loop through the array to see if randomNumber is in the array. 
+//   If it is, return true, if it's not, return false
+// */
 
-
-
-/*
-  As a continuation of the previous problem, write another function called 'both'.
-  Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
-  'both' should return a new array with the matching numbers found in both arr1 and arr2.
-
-  Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
-*/
-
-//Code Here
+// //Code Here
 
 
 
-////////// PROBLEM 12 //////////
+// ////////// PROBLEM 8 //////////
 
-// Do not edit the code below.
+// // Do not edit the code below.
+// var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+// // Do not edit the code above.
+
+// /*
+//   Here we're going to write a function that mimics going shopping and checking things off of our grocery list and adding new items to our list.
+
+//   Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. 
+//   If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, updated grocery list.
+
+//   Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list. 
+//   In addItem add the item you passed in to myGroceryList then return the new, updated grocery list.
+
+//   In both removeItem and addItem check to see if the 'myGroceryList' and 'item' arguments are truthy.
+//   If they are not, return an empty array.
+
+//   Here are some examples of calling your functions and what should be returned:
+//   removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+//   addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
+//   removeItem(myGroceryList) --> [];
+//   addItem() --> [];
+// */
+
+// //Code Here
+
+
+
+// ////////// PROBLEM 9 //////////
+
+// /*
+//   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
+// */
+
+// //Code Here
+
+
+
+// ////////// PROBLEM 10 //////////
+
+// // Do not edit the code below.
+// var numbers = [5, '9', 16, 19, '25', '34', 48];
+// // Do not edit the code above.
+
+// /*
+//   Write a function called addTen that is given 'numbers' as it's only argument.
+//   Return a new array after adding ten to each item in numbers. 
+//   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
+// */
+  
+// //Code Here
+
+
+
+// ////////// PROBLEM 11 //////////
+
+// // Do not edit the code below.
+// var num1 = Math.floor(Math.random() * 30);
+// var num2 = Math.floor(Math.random() * 30);
+// var arr1 = [];
+// var arr2 = [];
+// for(var i = 0; i < num1; i++){
+//   arr1.push(i);
+// }
+// for(var i = 0; i < num2; i++){
+//   arr2.push(i);
+// }
+// // Do not edit the code above.
+
+// /*
+//   Above is some code that adds a random number of values to both arr1 and arr2.
+//   Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. 
+//   Return the longer of the two arrays.
+// */
+
+// //Code Here
+
+
+
+// /*
+//   As a continuation of the previous problem, write another function called 'both'.
+//   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
+//   'both' should return a new array with the matching numbers found in both arr1 and arr2.
+
+//   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
+// */
+
+// //Code Here
+
+
+
+// ////////// PROBLEM 12 //////////
+
+// // Do not edit the code below.
 var devMountainEmployees = [];
 
 var joe = {
