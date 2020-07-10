@@ -150,6 +150,7 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 // //Code Here
 
+
 function divider(numbersArray) {
   const evensArray = []
   const oddsArray = []
@@ -168,13 +169,13 @@ function divider(numbersArray) {
 // ////////// PROBLEM 7 //////////
 
 // // Do not edit the code below.
-// var getRandomArbitrary = function() {
-//   return Math.floor(Math.random() * 30);
-// };
+var getRandomArbitrary = function() {
+  return Math.floor(Math.random() * 30);
+};
 // // Do not edit the code above.
 
 // /* 
-//   var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
+// var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 //   Above you're given a function (getRandomArbitrary) that will return a random number between 0 and 30.
 //   There is also a commented out array full of numbers to help you visualize what your function will be receiving.
 //   Write a function named finder that will take in an array as an argument.
@@ -185,6 +186,18 @@ function divider(numbersArray) {
 
 // //Code Here
 
+//Not passing all tests in spec runner, but correct in repl.it
+
+function finder(array) {
+  let randomNumber = getRandomArbitrary()
+  for (let i = 0; i < array.length; i++) {
+    if(array[i]=== randomNumber) {
+      return true
+    } else {
+      return false
+    }
+  }
+}
 
 
 // ////////// PROBLEM 8 //////////
